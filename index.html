@@ -328,10 +328,10 @@
         <!-- TODO: Add your video file path here -->
         <source src="static/videos/banner_video.mp4" type="video/mp4">
       </video>
-      <!-- TODO: Replace with your video description -->
+      <!-- TODO: Replace with your video description
       <h2 class="subtitle has-text-centered">
         Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+      </h2> -->
     </div>
   </div>
 </section>
@@ -346,7 +346,7 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            We present a robotic finger developed for the HAND ERC Finger Benchmark, optimized for the Minimalist track: simplicity, maintainability, and repairability. Operating at roughly 1.5× human scale with three active joints (including MCP splay), our design deliberately favors a small, well-understood set of components and accessible assembly over mechanical complexity. Every part is chosen so it can be quickly sourced, reprinted, or swapped, keeping the finger easy to diagnose and fix without sacrificing baseline performance across force, speed, and backdrivability. We characterize the finger on the shared testbed—measuring maximum fingertip force, step force and position control, Lissajous trajectory tracking, and fingertip impedance—and compare measured results against our analytical model and MuJoCo simulation. The result is a digit that demonstrates how a maintainability-first philosophy can meet competitive performance targets while remaining far simpler to build, repair, and reason about.
           </p>
         </div>
       </div>
@@ -354,6 +354,136 @@
   </div>
 </section>
 <!-- End paper abstract -->
+
+<!-- Specs vs Goals -->
+<section class="section hero" id="specs">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Specs Achieved vs. Team Goals</h2>
+    <p class="subtitle is-6 has-text-centered" style="margin-bottom:1.5rem;">
+      Goals are shown upfront &mdash; click any row to reveal what we achieved.
+    </p>
+
+    <div class="buttons is-centered" style="margin-bottom:1.5rem;">
+      <button class="button is-small is-dark is-rounded" onclick="revealAllSpecs()">Reveal All</button>
+      <button class="button is-small is-rounded" onclick="hideAllSpecs()">Hide All</button>
+    </div>
+
+    <div class="table-container">
+      <table class="table is-fullwidth is-hoverable" id="specsTable">
+        <thead><tr>
+          <th>Specification</th><th>Team Goal</th><th>Achieved</th>
+        </tr></thead>
+        <tbody>
+        <tr class="spec-row" onclick="toggleSpec(this)">
+          <td class="spec-name">Scale</td>
+          <td class="spec-goal">~1.5&times; human finger (gorilla scale)</td>
+          <td class="spec-achieved">
+            <span class="spec-hidden">Click to reveal</span>
+            <span class="spec-value">~1.5&times achieved!</span>
+          </td>
+        </tr>
+        <tr class="spec-row" onclick="toggleSpec(this)">
+          <td class="spec-name">Active DOF</td>
+          <td class="spec-goal">3 active joints max; one splay (MCP abd/add)</td>
+          <td class="spec-achieved">
+            <span class="spec-hidden">Click to reveal</span>
+            <span class="spec-value">3 DOF achieved!</span>
+          </td>
+        </tr>
+        <tr class="spec-row" onclick="toggleSpec(this)">
+          <td class="spec-name">Range of Motion</td>
+          <td class="spec-goal">~90&deg; in-plane (80&deg; min); &plusmn;10&deg; splay</td>
+          <td class="spec-achieved">
+            <span class="spec-hidden">Click to reveal</span>
+            <span class="spec-value">Full range of motion achieved!</span>
+          </td>
+        </tr>
+        <tr class="spec-row" onclick="toggleSpec(this)">
+          <td class="spec-name">Speed</td>
+          <td class="spec-goal">&ge; 1 full ROM in 1 s</td>
+          <td class="spec-achieved">
+            <span class="spec-hidden">Click to reveal</span>
+            <span class="spec-value">1 full ROm in 1 s achieved!</span>
+          </td>
+        </tr>
+        <tr class="spec-row" onclick="toggleSpec(this)">
+          <td class="spec-name">Continuous Force</td>
+          <td class="spec-goal">&ge; 20 N at fingerpad extension</td>
+          <td class="spec-achieved">
+            <span class="spec-hidden">Click to reveal</span>
+            <span class="spec-value">20.02N at fingertip avchieved!</span>
+          </td>
+        </tr>
+        <tr class="spec-row" onclick="toggleSpec(this)">
+          <td class="spec-name">Max Power (all DOF)</td>
+          <td class="spec-goal">&le; 100 W total during use</td>
+          <td class="spec-achieved">
+            <span class="spec-hidden">Click to reveal</span>
+            <span class="spec-value">65W achieved!</span>
+          </td>
+        </tr>
+        <tr class="spec-row" onclick="toggleSpec(this)">
+          <td class="spec-name">Emergency Stop</td>
+          <td class="spec-goal">Power-cutting E-stop required</td>
+          <td class="spec-achieved">
+            <span class="spec-hidden">Click to reveal</span>
+            <span class="spec-value">Working E-stop achieved!</span>
+          </td>
+        </tr>
+        <tr class="spec-row" onclick="toggleSpec(this)">
+          <td class="spec-name">Budget</td>
+          <td class="spec-goal">~$5,000 per team</td>
+          <td class="spec-achieved">
+            <span class="spec-hidden">Click to reveal</span>
+            <span class="spec-value">Total cost of 4000$ achieved!</span>
+          </td>
+        </tr>
+        <tr class="spec-row" onclick="toggleSpec(this)">
+          <td class="spec-name">Full Finger Assembly Time</td>
+          <td class="spec-goal">15 min</td>
+          <td class="spec-achieved">
+            <span class="spec-hidden">Click to reveal</span>
+            <span class="spec-value">10 min 6 sachieved!</span>
+          </td>
+        </tr>
+        <tr class="spec-row" onclick="toggleSpec(this)">
+          <td class="spec-name">Tendon Routing Time</td>
+          <td class="spec-goal">5 min</td>
+          <td class="spec-achieved">
+            <span class="spec-hidden">Click to reveal</span>
+            <span class="spec-value">4 min 55 s achieved!</span>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<style>
+  #specs .spec-row { cursor: pointer; transition: background 0.15s ease; }
+  #specs .spec-row:hover { background: #f0f0f0; }
+  #specs .spec-name { font-weight: 700; }
+  #specs td { vertical-align: middle; }
+  #specs .spec-value { display: none; font-weight: 700; color: #1b6b3a; }
+  #specs .spec-hidden {
+    display: inline-block; color: #999; font-style: italic; font-size: 0.85rem;
+    border: 1px dashed #ccc; border-radius: 999px; padding: 2px 12px;
+  }
+  #specs .spec-row.revealed .spec-hidden { display: none; }
+  #specs .spec-row.revealed .spec-value { display: inline; }
+</style>
+
+<script>
+  function toggleSpec(row) { row.classList.toggle("revealed"); }
+  function revealAllSpecs() {
+    document.querySelectorAll("#specs .spec-row").forEach(function (r) { r.classList.add("revealed"); });
+  }
+  function hideAllSpecs() {
+    document.querySelectorAll("#specs .spec-row").forEach(function (r) { r.classList.remove("revealed"); });
+  }
+</script>
+<!-- End Specs vs Goals -->
 
 <!-- Bill of Materials -->
 <section class="section hero is-light" id="bom">
@@ -636,14 +766,14 @@
 (function () {
   // EDIT: each part has a label, an image path, and an estimated repair time.
   var parts = [
-    { name: "Fingertip",            img: "static/images/parts/fingertip.jpg",          time: "2 min" },
-    { name: "Middle Phalange",      img: "static/images/parts/middle_phalange.jpg",     time: "3 min" },
-    { name: "PIP Bearings",         img: "static/images/parts/pip_bearings.jpg",        time: "4 min" },
-    { name: "MCP Flexion Bearings", img: "static/images/parts/mcp_flexion_bearings.jpg",time: "4 min" },
-    { name: "PIP Pulleys",          img: "static/images/parts/pip_pulleys.jpg",         time: "3 min" },
-    { name: "MCP Flexion Pulleys",  img: "static/images/parts/mcp_flexion_pulleys.jpg", time: "3 min" },
-    { name: "PIP Spring",           img: "static/images/parts/pip_spring.jpg",          time: "2 min" },
-    { name: "MCP Flexion Springs",  img: "static/images/parts/mcp_flexion_springs.jpg", time: "2 min" }
+    { name: "Fingertip",            img: "static/images/fingertip.png",          time: "1:19.94" },
+    { name: "Middle Phalange",      img: "static/images/NiddlePhalange.png",     time: "4:02:10" },
+    { name: "PIP Bearings",         img: "static/images/PIPBearings.png",        time: "0:46.74" },
+    { name: "MCP Flexion Bearings", img: "static/images/MCPSplayBearings.png",time: "0:24.20" },
+    { name: "PIP Pulleys",          img: "static/images/PIPPulleys.png",         time: "5:22.65" },
+    { name: "MCP Flexion Pulleys",  img: "static/images//MCPFlexionPulley.png", time: "3:04.10" },
+    { name: "PIP Spring",           img: "static/images/Springs.png",          time: "0:54.67" },
+    { name: "MCP Flexion Springs",  img: "static/images/Springs.png", time: "1:09.92" }
   ];
 
   var colors = ["#2b3a67", "#3d5a80", "#496a81", "#66999b",
@@ -987,10 +1117,30 @@
 </section>
 <!-- End Control Flow Diagram -->
 
+<!-- Calibration -->
+<section class="section hero" id="calibration">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Calibration</h2>
+        <div class="content has-text-justified">
+          <p>TODO: Describe the calibration procedure — hard-stop seek, tension zeroing, and how the finger establishes its reference configuration before entering any control state.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="subtitle has-text-centered">Calibration routine.</h2>
+    <video controls muted loop style="max-width:100%; height:auto; margin:1rem auto; display:block;" preload="metadata">
+      <source src="static/videos/calibration.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+<!-- End Calibration -->
+
 <<!-- Testing -->
 <section class="section hero" id="testing">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Testing &amp; Characterization</h2>
+    <h2 class="title is-3 has-text-centered">Testing &amp; Characterization: Control</h2>
     <p class="subtitle is-6 has-text-centered" style="margin-bottom:2rem;">
       Choose a category, then select a test to view its results.
     </p>
@@ -999,7 +1149,7 @@
     <div class="buttons is-centered" style="margin-bottom:1.5rem;">
       <button class="button is-medium cat-tab is-dark is-selected" data-cat="effort" onclick="showCat('effort')">Effort / Force</button>
       <button class="button is-medium cat-tab" data-cat="flow" onclick="showCat('flow')">Flow / Speed</button>
-      <button class="button is-medium cat-tab" data-cat="backdrive" onclick="showCat('backdrive')">Backdrivability</button>
+      <button class="button is-medium cat-tab" data-cat="backdrivability" onclick="showCat('backdrivability')">Backdrivability</button>
     </div>
 
     <!-- Level 2: tests within the selected category -->
@@ -1011,8 +1161,8 @@
       <div class="test-tab-group" id="testgroup-flow" style="display:none; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
         <button class="button test-tab is-dark is-selected" data-test="trajectory" data-cat="flow" onclick="showTest('trajectory','flow')">Trajectory Tracking</button>
       </div>
-      <div class="test-tab-group" id="testgroup-backdrive" style="display:none; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
-        <button class="button test-tab is-dark is-selected" data-test="impedance" data-cat="backdrive" onclick="showTest('impedance','backdrive')">Fingertip Impedance</button>
+      <div class="test-tab-group" id="testgroup-backdrivability" style="display:none; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
+        <button class="button test-tab is-dark is-selected" data-test="impedance" data-cat="backdrivability" onclick="showTest('impedance','backdrivability')">Fingertip Impedance</button>
       </div>
 
     <!-- Level 3: result panels -->
@@ -1056,54 +1206,54 @@
         <h3 class="title is-4">Step Position Control</h3>
         <div class="content has-text-justified">
           <p>The fingertip is attached to a spring representing an unknown environment (nominal stiffness ~1.2 N/cm, capable of 10 cm extension). We control the spring extension (measured by motor encoder or external sensor) to track a square-wave reference cycling between 0.5 cm and 2.5 cm every 1 s, characterizing settling time, overshoot, and steady-state error.</p>
-          <div id="test-carousel-stepposition" class="carousel results-carousel">
-            <div class="item">
-              <img src="static/images/tests/step_position_1.jpg" alt="Step position setup" loading="lazy"/>
-              <h2 class="subtitle has-text-centered">Spring environment setup.</h2>
-            </div>
-            <div class="item">
-              <img src="static/images/tests/step_position_2.jpg" alt="Step position response" loading="lazy"/>
-              <h2 class="subtitle has-text-centered">Tracking response.</h2>
-            </div>
-          </div>
+
+          <h2 class="subtitle has-text-centered">Step position</h2>
+          <video controls muted loop style="max-width:100%; height:auto; margin:1rem auto; display:block;" preload="metadata">
+            <source src="static/videos/step_pos_live.mov" type="video/mp4">
+          </video>
+
+          <h2 class="subtitle has-text-centered">Step Position Response</h2>
+          <img src="static/images/step_pos.jpg" alt="Step position setup" loading="lazy" style="max-width:100%; height:auto; margin:1rem auto; display:block;"/>
+
+          <h2 class="subtitle has-text-centered">Rise and Settling Time Calculations</h2>
+          <img src="static/images/risetime.png" alt="Step position setup" loading="lazy" style="max-width:100%; height:auto; margin:1rem auto; display:block;"/>
         </div>
       </div>
       <div class="test-panel" id="panel-trajectory" data-cat="flow" style="display:none;">
         <h3 class="title is-4">Trajectory Tracking</h3>
-        <div class="content has-text-justified">
+        <div class="content has-text-justified" style="max-width:900px; margin:0 auto;">
           <p>A tracking marker is placed on the fingertip and the finger is commanded to trace a Lissajous figure in its main plane of motion (flexion plane, ignoring splay; captured by 2D imaging). The reference is a 1:2 frequency-ratio curve with a 3&pi;/4 phase offset, bounded within a 3&nbsp;cm &times; 3&nbsp;cm region and traced as one full closed period at 0.5&nbsp;Hz. We record the marker's measured position, integrate the position error over the complete path, report the RMS tracking error, and visualize the measured path against the reference.</p>
           <div class="content" style="text-align:center; font-family: monospace; background:#f5f5f5; padding:1rem; border-radius:6px; margin:1rem 0;">
             x(t) = 1.5&nbsp;sin(2&pi;ft)&nbsp;cm<br>
             y(t) = 1.5&nbsp;sin(2&pi;(2f)t + 3&pi;/4)&nbsp;cm
           </div>
-          <div id="test-carousel-trajectory" class="carousel results-carousel">
-            <div class="item">
-              <img src="static/images/tests/lissajous_reference.jpg" alt="Reference Lissajous trajectory" loading="lazy"/>
-              <h2 class="subtitle has-text-centered">Reference trajectory.</h2>
-            </div>
-            <div class="item">
-              <img src="static/images/tests/lissajous_measured.jpg" alt="Measured vs reference path" loading="lazy"/>
-              <h2 class="subtitle has-text-centered">Measured vs. reference path.</h2>
-            </div>
-          </div>
+
+          <h2 class="subtitle has-text-centered">Trajectory Tracking</h2>
           <video controls muted loop style="max-width:100%; height:auto; margin:1rem auto; display:block;" preload="metadata">
-            <source src="static/videos/tests/trajectory_tracking.mp4" type="video/mp4">
+            <source src="static/videos/trajectory_live.mov" type="video/mp4">
           </video>
-          <h2 class="subtitle has-text-centered">Trajectory tracking animation.</h2>
+
+          <h2 class="subtitle has-text-centered">RMSE Error Analysis</h2>
+          <img src="static/images/trajectory_tracking.png" alt="Step position setup" loading="lazy" style="max-width:100%; height:auto; margin:1rem auto; display:block;"/>
+
+          <h2 class="subtitle has-text-centered">Trajectory Comparison.</h2>
+          <video controls muted loop style="max-width:100%; height:auto; margin:1rem auto; display:block;" preload="metadata">
+            <source src="static/videos/trajectory_tracking.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
-      <div class="test-panel" id="panel-impedance" data-cat="backdrive" style="display:none;">
+      <div class="test-panel" id="panel-impedance" data-cat="backdrivability" style="display:none;">
         <h3 class="title is-4">Fingertip Impedance</h3>
         <div class="content has-text-justified">
           <p>With the control system active but commanded to zero force, we externally apply forces to the fingertip using the testbed and measure the resulting displacement. We characterize the apparent stiffness, damping, and inertia across different frequencies and report equivalent mechanical impedance parameters.</p>
           <div id="test-carousel-impedance" class="carousel results-carousel">
             <div class="item">
-              <img src="static/images/tests/impedance_frf.jpg" alt="Impedance frequency response" loading="lazy"/>
+              <img src="static/images/back-1.webp" alt="Impedance frequency response" loading="lazy"/>
               <h2 class="subtitle has-text-centered">Measured FRF.</h2>
             </div>
             <div class="item">
-              <img src="static/images/tests/impedance_fit.jpg" alt="Impedance model fit" loading="lazy"/>
-              <h2 class="subtitle has-text-centered">Fitted model.</h2>
+              <img src="static/images/back-2.webp" alt="Impedance model fit" loading="lazy"/>
+              <h2 class="subtitle has-text-centered">Position and Force Comparison.</h2>
             </div>
           </div>
         </div>
@@ -1167,6 +1317,56 @@
 </script>
 <!-- End Testing -->
 
+<!-- Mechanical Testing -->
+<section class="section hero is-light" id="mech-testing">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Testing &amp; Characterization: Mechanical</h2>
+    <p class="subtitle is-6 has-text-centered" style="margin-bottom:2rem;">
+      Select a test to view its results.
+    </p>
+
+    <!-- Test tabs -->
+    <div class="test-tab-group" style="display:flex; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
+      <button class="button mech-tab is-dark is-selected" data-test="mech1" onclick="showMechTest('mech1')">Snapfit Lifespan Testing</button>
+      <button class="button mech-tab" data-test="mech2" onclick="showMechTest('mech2')">Repetitive Flexion-Extension Cycles Testing</button>
+    </div>
+
+    <!-- Panels -->
+    <div class="mech-panel" id="mechpanel-mech1" style="display:block;">
+      <h3 class="title is-4">Snapfit Lifespan Testing</h3>
+      <div class="content has-text-justified" style="max-width:900px; margin:0 auto;">
+        <p>The snap fit lifespan test seeks to validate the total number of cycles that the finger’s snap fits can withstand before failing. This is important because many of the finger’s critical features are assembled via snap fits. If the snap fits wear too quickly, the overall lifespan of the finger will be reduced as its joints become increasingly susceptible to popping apart under normal operation. To measure the lifespan of the finger’s snap fits, we will push in and then pull out a singular snap fit until it takes less than 20 N of pulling force to pop the snap fit out of place. Our goal for this test is to reach 300 cycles of assembly and disassembly (which spans 30 measurements) without failure in the snap fit. We believe that 300 cycles of assembly/disassembly is much greater than what would be seen in real-world use; therefore, surviving this many cycles will validate the long-term durability of the finger’s critical snap-fit joints. Testing results showed reasonable degradation.</p>
+
+        <h2 class="subtitle has-text-centered">Snapfit Lifespan Testing Results.</h2>
+        <img src="static/images/snapfit.png" alt="Mechanical test one result" loading="lazy" style="max-width:100%; height:auto; margin:1rem auto; display:block;"/>
+      </div>
+    </div>
+
+    <div class="mech-panel" id="mechpanel-mech2" style="display:none;">
+      <h3 class="title is-4">Repetitive Flexion-Extension Cycles Testing</h3>
+      <div class="content has-text-justified" style="max-width:900px; margin:0 auto;">
+        <p>Making sure that the finger can run continuously is critical for validating our system’s robustness and minimizing the required number of necessary repairs. For this test, we will run the finger through repetitive flexion-extension cycles at 80% range of motion for 60 minutes and monitor temperature rise, current draw increase or any mechanical failures in the system. Our finger was able to complete this test with no visible degradation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #mech-testing .mech-tab { margin:0.25rem; }
+  #mech-testing .mech-panel { animation: testfade 0.3s ease; }
+</style>
+
+<script>
+  function showMechTest(id) {
+    document.querySelectorAll("#mech-testing .mech-panel").forEach(function (p) { p.style.display = "none"; });
+    var active = document.getElementById("mechpanel-" + id);
+    if (active) active.style.display = "block";
+    document.querySelectorAll("#mech-testing .mech-tab").forEach(function (b) {
+      b.className = "button mech-tab" + (b.getAttribute("data-test") === id ? " is-dark is-selected" : "");
+    });
+  }
+</script>
+<!-- End Mechanical Testing -->
 
 <!-- Paper poster -->
 <!-- <section class="hero is-small is-light">
@@ -1197,8 +1397,9 @@
             We thank <strong>Professor Ed Colgate, Raphael Cherney, and Sairam Umakanth</strong> for guidance and feedback
             throughout Robot Design Studio, and the staff of the Northwestern University
             Center for Robotics and Biosystems for access to lab space, equipment, and
-            technical advice. We also thank <strong>Nick Marchuk</strong> for their help
-            throughout this project and letting us use the Mechatronics Lab.
+            technical advice. We also thank <strong>Nick Marchuk</strong> for his help
+            throughout this project and letting us use the Mechatronics Lab, and <strong>Tony Shilati</strong>
+            for extensive help throughout testing.
           </p>
           <p>
             Finally, we thank our classmates and everyone who tested, questioned, and
@@ -1211,120 +1412,6 @@
 </section>
 <!-- End Acknowledgments -->
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
 
 
   <footer class="footer">

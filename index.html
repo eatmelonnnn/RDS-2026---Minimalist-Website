@@ -1060,7 +1060,7 @@
 <<!-- Testing -->
 <section class="section hero" id="testing">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Testing &amp; Characterization</h2>
+    <h2 class="title is-3 has-text-centered">Testing &amp; Characterization： Control</h2>
     <p class="subtitle is-6 has-text-centered" style="margin-bottom:2rem;">
       Choose a category, then select a test to view its results.
     </p>
@@ -1234,6 +1234,56 @@
 </script>
 <!-- End Testing -->
 
+<!-- Mechanical Testing -->
+<section class="section hero is-light" id="mech-testing">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Mechanical Testing</h2>
+    <p class="subtitle is-6 has-text-centered" style="margin-bottom:2rem;">
+      Select a test to view its results.
+    </p>
+
+    <!-- Test tabs -->
+    <div class="test-tab-group" style="display:flex; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
+      <button class="button mech-tab is-dark is-selected" data-test="mech1" onclick="showMechTest('mech1')">Test One</button>
+      <button class="button mech-tab" data-test="mech2" onclick="showMechTest('mech2')">Test Two</button>
+    </div>
+
+    <!-- Panels -->
+    <div class="mech-panel" id="mechpanel-mech1" style="display:block;">
+      <h3 class="title is-4">Snapfit Lifespan Testing</h3>
+      <div class="content has-text-justified" style="max-width:900px; margin:0 auto;">
+        <p>The snap fit lifespan test seeks to validate the total number of cycles that the finger’s snap fits can withstand before failing. This is important because many of the finger’s critical features are assembled via snap fits. If the snap fits wear too quickly, the overall lifespan of the finger will be reduced as its joints become increasingly susceptible to popping apart under normal operation. To measure the lifespan of the finger’s snap fits, we will push in and then pull out a singular snap fit until it takes less than 20 N of pulling force to pop the snap fit out of place. Our goal for this test is to reach 300 cycles of assembly and disassembly (which spans 30 measurements) without failure in the snap fit. We believe that 300 cycles of assembly/disassembly is much greater than what would be seen in real-world use; therefore, surviving this many cycles will validate the long-term durability of the finger’s critical snap-fit joints.</p>
+
+        <h2 class="subtitle has-text-centered">Test One result.</h2>
+        <img src="static/images/mech_test_1.jpg" alt="Mechanical test one result" loading="lazy" style="max-width:100%; height:auto; margin:1rem auto; display:block;"/>
+      </div>
+    </div>
+
+    <div class="mech-panel" id="mechpanel-mech2" style="display:none;">
+      <h3 class="title is-4">Repetitive Flexion-Extension Cycles Testing</h3>
+      <div class="content has-text-justified" style="max-width:900px; margin:0 auto;">
+        <p>Making sure that the finger can run continuously is critical for validating our system’s robustness and minimizing the required number of necessary repairs. For this test, we will run the finger through repetitive flexion-extension cycles at 80% range of motion for 60 minutes and monitor temperature rise, current draw increase or any mechanical failures in the system. Our finger was able to complete this test with no visible degradation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #mech-testing .mech-tab { margin:0.25rem; }
+  #mech-testing .mech-panel { animation: testfade 0.3s ease; }
+</style>
+
+<script>
+  function showMechTest(id) {
+    document.querySelectorAll("#mech-testing .mech-panel").forEach(function (p) { p.style.display = "none"; });
+    var active = document.getElementById("mechpanel-" + id);
+    if (active) active.style.display = "block";
+    document.querySelectorAll("#mech-testing .mech-tab").forEach(function (b) {
+      b.className = "button mech-tab" + (b.getAttribute("data-test") === id ? " is-dark is-selected" : "");
+    });
+  }
+</script>
+<!-- End Mechanical Testing -->
 
 <!-- Paper poster -->
 <!-- <section class="hero is-small is-light">

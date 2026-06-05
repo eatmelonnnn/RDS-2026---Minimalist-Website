@@ -1069,7 +1069,7 @@
     <div class="buttons is-centered" style="margin-bottom:1.5rem;">
       <button class="button is-medium cat-tab is-dark is-selected" data-cat="effort" onclick="showCat('effort')">Effort / Force</button>
       <button class="button is-medium cat-tab" data-cat="flow" onclick="showCat('flow')">Flow / Speed</button>
-      <button class="button is-medium cat-tab" data-cat="backdrive" onclick="showCat('backdrive')">Backdrivability</button>
+      <button class="button is-medium cat-tab" data-cat="backdrivability" onclick="showCat('backdrivability')">Backdrivability</button>
     </div>
 
     <!-- Level 2: tests within the selected category -->
@@ -1081,8 +1081,8 @@
       <div class="test-tab-group" id="testgroup-flow" style="display:none; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
         <button class="button test-tab is-dark is-selected" data-test="trajectory" data-cat="flow" onclick="showTest('trajectory','flow')">Trajectory Tracking</button>
       </div>
-      <div class="test-tab-group" id="testgroup-backdrive" style="display:none; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
-        <button class="button test-tab is-dark is-selected" data-test="impedance" data-cat="backdrive" onclick="showTest('impedance','backdrive')">Fingertip Impedance</button>
+      <div class="test-tab-group" id="testgroup-backdrivability" style="display:none; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
+        <button class="button test-tab is-dark is-selected" data-test="impedance" data-cat="backdrivability" onclick="showTest('impedance','backdrivability')">Fingertip Impedance</button>
       </div>
 
     <!-- Level 3: result panels -->
@@ -1159,7 +1159,7 @@
           </video>
         </div>
       </div>
-      <div class="test-panel" id="panel-impedance" data-cat="backdrive" style="display:none;">
+      <div class="test-panel" id="panel-impedance" data-cat="backdrivability" style="display:none;">
         <h3 class="title is-4">Fingertip Impedance</h3>
         <div class="content has-text-justified">
           <p>With the control system active but commanded to zero force, we externally apply forces to the fingertip using the testbed and measure the resulting displacement. We characterize the apparent stiffness, damping, and inertia across different frequencies and report equivalent mechanical impedance parameters.</p>

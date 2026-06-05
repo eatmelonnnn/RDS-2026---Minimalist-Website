@@ -1176,7 +1176,6 @@
     <!-- Level 2: tests within the selected category -->
       <div class="test-tab-group" id="testgroup-effort" style="display:flex; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
         <button class="button test-tab is-dark is-selected" data-test="force" data-cat="effort" onclick="showTest('force','effort')">Maximum Fingertip Force</button>
-        <button class="button test-tab" data-test="stepforce" data-cat="effort" onclick="showTest('stepforce','effort')">Step Force Control</button>
         <button class="button test-tab" data-test="stepposition" data-cat="effort" onclick="showTest('stepposition','effort')">Step Position Control</button>
       </div>
       <div class="test-tab-group" id="testgroup-flow" style="display:none; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
@@ -1199,26 +1198,6 @@
             <div class="item">
               <img src="static/images/tests/max_force_2.jpg" alt="Maximum fingertip force results" loading="lazy"/>
               <h2 class="subtitle has-text-centered">Measured force results.</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="test-panel" id="panel-stepforce" data-cat="effort" style="display:none;">
-        <h3 class="title is-4">Step Force Control</h3>
-        <div class="content has-text-justified">
-          <p>Track a square-wave reference force alternating between 1 N and 3 N every 1 s. We characterize settling time, overshoot, and steady-state error using a stationary load cell, then repeat the test for 10 N and 20 N force levels.</p>
-          <div id="test-carousel-stepforce" class="carousel results-carousel">
-            <div class="item">
-              <img src="static/images/tests/step_force_1.jpg" alt="Step force 1-3N response" loading="lazy"/>
-              <h2 class="subtitle has-text-centered">1&ndash;3 N step response.</h2>
-            </div>
-            <div class="item">
-              <img src="static/images/tests/step_force_2.jpg" alt="Step force 10N response" loading="lazy"/>
-              <h2 class="subtitle has-text-centered">10 N step response.</h2>
-            </div>
-            <div class="item">
-              <img src="static/images/tests/step_force_3.jpg" alt="Step force 20N response" loading="lazy"/>
-              <h2 class="subtitle has-text-centered">20 N step response.</h2>
             </div>
           </div>
         </div>

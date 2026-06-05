@@ -1126,16 +1126,16 @@
         <h3 class="title is-4">Step Position Control</h3>
         <div class="content has-text-justified">
           <p>The fingertip is attached to a spring representing an unknown environment (nominal stiffness ~1.2 N/cm, capable of 10 cm extension). We control the spring extension (measured by motor encoder or external sensor) to track a square-wave reference cycling between 0.5 cm and 2.5 cm every 1 s, characterizing settling time, overshoot, and steady-state error.</p>
-          <div id="test-carousel-stepposition" class="carousel results-carousel">
-            <div class="item">
-              <img src="static/images/tests/step_position_1.jpg" alt="Step position setup" loading="lazy"/>
-              <h2 class="subtitle has-text-centered">Spring environment setup.</h2>
-            </div>
-            <div class="item">
-              <img src="static/images/tests/step_position_2.jpg" alt="Step position response" loading="lazy"/>
-              <h2 class="subtitle has-text-centered">Tracking response.</h2>
-            </div>
-          </div>
+
+          <h2 class="subtitle has-text-centered">Step position response.</h2>
+          <video controls muted loop style="max-width:100%; height:auto; margin:1rem auto; display:block;" preload="metadata">
+            <source src="static/videos/step_pos_live.mov" type="video/mp4">
+          </video>
+
+          <img src="static/images/step_pos.jpg" alt="Step position setup" loading="lazy" style="max-width:100%; height:auto; margin:1rem auto; display:block;"/>
+          <h2 class="subtitle has-text-centered">Spring environment setup.</h2>
+        </div>
+        </div>
         </div>
       </div>
       <div class="test-panel" id="panel-trajectory" data-cat="flow" style="display:none;">
@@ -1154,7 +1154,7 @@
 
           <div id="test-carousel-trajectory" class="carousel results-carousel">
             <div class="item">
-              <img src="static/images/tests/trajectory_tracking.png" alt="Reference Lissajous trajectory" loading="lazy"/>
+              <img src="static/images/trajectory_tracking.png" alt="Reference Lissajous trajectory" loading="lazy"/>
               <h2 class="subtitle has-text-centered">Reference trajectory.</h2>
             </div>
           </div>

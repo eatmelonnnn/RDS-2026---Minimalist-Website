@@ -186,53 +186,60 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
+ <!-- Section Navigation Dropdown -->
+ <div class="more-works-container">
+  <button class="more-works-btn" onclick="toggleMoreWorks()" title="Jump to a section">
+    <i class="fas fa-list"></i>
+    Sections
+    <i class="fas fa-chevron-down dropdown-arrow"></i>
+  </button>
+  <div class="more-works-dropdown" id="moreWorksDropdown">
+    <div class="dropdown-header">
+      <h4>Jump to Section</h4>
+      <button class="close-btn" onclick="toggleMoreWorks()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="works-list">
+      <a href="#specs" class="work-item" onclick="toggleMoreWorks()">
+        <div class="work-info"><h5>Specs vs. Goals</h5></div>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#bom" class="work-item" onclick="toggleMoreWorks()">
+        <div class="work-info"><h5>Bill of Materials</h5></div>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#repair-pinwheel" class="work-item" onclick="toggleMoreWorks()">
+        <div class="work-info"><h5>Live Reassembly Demo</h5></div>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#control-flow" class="work-item" onclick="toggleMoreWorks()">
+        <div class="work-info"><h5>Control Flow Diagram</h5></div>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#testing" class="work-item" onclick="toggleMoreWorks()">
+        <div class="work-info"><h5>Testing &amp; Characterization</h5></div>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#mech-testing" class="work-item" onclick="toggleMoreWorks()">
+        <div class="work-info"><h5>Mechanical Testing</h5></div>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#calibration" class="work-item" onclick="toggleMoreWorks()">
+        <div class="work-info"><h5>Calibration</h5></div>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#acknowledgments" class="work-item" onclick="toggleMoreWorks()">
+        <div class="work-info"><h5>Acknowledgments</h5></div>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#BibTeX" class="work-item" onclick="toggleMoreWorks()">
+        <div class="work-info"><h5>BibTeX</h5></div>
+        <i class="fas fa-arrow-right"></i>
+      </a>
     </div>
   </div>
+</div>
 
   <main id="main-content">
   <section class="hero">

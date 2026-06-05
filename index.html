@@ -1108,7 +1108,7 @@
       <div class="test-panel" id="panel-force" data-cat="effort" style="display:block;">
         <h3 class="title is-4">Maximum Fingertip Force</h3>
         <div class="content has-text-justified">
-          <p>Characterize the maximum continuous and dynamic force at both singular and non-singular configurations (e.g. full extension vs. the point of maximum mechanical advantage). The measured max force is 20.09N at fingertip.</p>
+          <p>Characterize the maximum continuous and dynamic force at both singular and non-singular configurations (e.g. full extension vs. the point of maximum mechanical advantage). The measured max force is 19.07N at fingertip.</p>
         <h2 class="subtitle has-text-centered">Maximimum Fingertip Force</h2>
         <img src="static/images/maxforce.png" alt="Maximum fingertip force" loading="lazy" style="max-width:100%; height:auto; margin:1rem auto; display:block;"/>
         </div>
@@ -1157,16 +1157,10 @@
         <h3 class="title is-4">Fingertip Impedance</h3>
         <div class="content has-text-justified">
           <p>With the control system active but commanded to zero force, we externally apply forces to the fingertip using the testbed and measure the resulting displacement. We characterize the apparent stiffness, damping, and inertia across different frequencies and report equivalent mechanical impedance parameters.</p>
-          <div id="test-carousel-impedance" class="carousel results-carousel">
-            <div class="item">
-              <img src="static/images/back1.png" alt="Impedance frequency response" loading="lazy"/>
-              <h2 class="subtitle has-text-centered">Measured FRF.</h2>
-            </div>
-            <div class="item">
-              <img src="static/images/back2.png" alt="Impedance model fit" loading="lazy"/>
-              <h2 class="subtitle has-text-centered">Position and Force Comparison.</h2>
-            </div>
-          </div>
+          <h2 class="subtitle has-text-centered">Impedance Frequency Response</h2>
+          <img src="static/images/back2.png" alt="Impedance Frequency Response" loading="lazy" style="max-width:100%; height:auto; margin:1rem auto; display:block;"/>
+          <h2 class="subtitle has-text-centered">Commanded and Measured Position and ForceComparison</h2>
+          <img src="static/images/back1.png" alt="Commanded and Measured Position and Force Comparison" loading="lazy" style="max-width:100%; height:auto; margin:1rem auto; display:block;"/>
           <div class="content has-text-justified"></div>
           <p>The magnitude rolls off at approximately −20 dB/decade across the tested band (0.5 – 30 Hz), and the phase sits near −90° over the same range, 
             both indicating the dominant behavior is well approximated by a single-mass-with-damping model. The fitted impedance (dashed line) tracks the measured response closely, 

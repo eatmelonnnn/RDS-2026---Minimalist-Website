@@ -1047,6 +1047,32 @@
 </section>
 <!-- End Control Flow Diagram -->
 
+<!-- Calibration -->
+<section class="section hero" id="calibration">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Calibration</h2>
+        <div class="content has-text-justified">
+          <p>
+            The calibration procedure is a fully automated procedure which calibrates the motor positions to the finger positions as well as zeroes the tension sensors. The sequence starts with motor calibration, in which each motor is individually commanded at a constant velocity until they reach their calibration hardstop (90 for the MCP flexion and DIP flexion motors, and 20 for the splay motor), which is determined by a current spike. This is done twice for each motor, with the encoder position value read three times consecutively during each hardstop contact. All of these encoder position values for a given motor are averaged to find the true position of the hardstop.
+
+            Next, the motors move the finger to the “home position” (at which all finger angles are zero). There, the tensions are read at each sensor several times and averaged to find the necessary zero offset.
+            
+            The calibration sequence takes a total of 30 seconds. This sequence runs automatically upon running the program, but can always be rerun by simply using the calibration button to switch to the calibration state. During calibration, the finger cannot be switched to another state.
+            
+          </p>
+        </div>
+        <div class="publication-video">
+          <video controls muted loop preload="metadata">
+            <source src="static/videos/calibration.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Calibration -->
 
 <<!-- Testing -->
 <section class="section hero" id="testing">
@@ -1108,11 +1134,6 @@
             x(t) = 1.5&nbsp;sin(2&pi;ft)&nbsp;cm<br>
             y(t) = 1.5&nbsp;sin(2&pi;(2f)t + 3&pi;/4)&nbsp;cm
           </div>
-
-          <h2 class="subtitle has-text-centered">Simulated Finger Trajectory in Python</h2>
-          <video controls muted loop style="max-width:100%; height:auto; margin:1rem auto; display:block;" preload="metadata">
-            <source src="static/videos/fingersimulation.mp4" type="video/mp4">
-          </video>
 
           <h2 class="subtitle has-text-centered">Trajectory Tracking</h2>
           <video controls muted loop style="max-width:100%; height:auto; margin:1rem auto; display:block;" preload="metadata">
@@ -1276,7 +1297,7 @@
     <div class="columns is-vcentered">
       <div class="column is-half">
         <figure class="image">
-          <img src="static/images/teamphoto.jpeg" alt="Team Minimalists"
+          <img src="static/images/team_photo.jpg" alt="Team Minimalists"
                style="border-radius:8px;"/>
         </figure>
       </div>
@@ -1289,7 +1310,7 @@
             repairability.
           </p>
           <p>
-            Please contact any of us for any questions or more information about the project.
+            Please feel free to contact any of us for any questions or additional information about the project.
           </p>
         </div>
       </div>

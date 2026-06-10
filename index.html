@@ -1090,9 +1090,11 @@
     </div>
 
     <!-- Level 2: tests within the selected category -->
-      <div class="test-tab-group" id="testgroup-effort" style="display:flex; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
-        <button class="button test-tab is-dark is-selected" data-test="force" data-cat="effort" onclick="showTest('force','effort')">Maximum Fingertip Force</button>        <button class="button test-tab" data-test="stepposition" data-cat="effort" onclick="showTest('stepposition','effort')">Step Position Control</button>
-      </div>
+    <div class="test-tab-group" id="testgroup-effort" style="display:flex; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
+      <button class="button test-tab is-dark is-selected" data-test="force" data-cat="effort" onclick="showTest('force','effort')">Maximum Fingertip Force</button>
+      <button class="button test-tab" data-test="stepforce" data-cat="effort" onclick="showTest('stepforce','effort')">Step Force Control</button>
+      <button class="button test-tab" data-test="stepposition" data-cat="effort" onclick="showTest('stepposition','effort')">Step Position Control</button>
+    </div>
       <div class="test-tab-group" id="testgroup-flow" style="display:none; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
         <button class="button test-tab is-dark is-selected" data-test="trajectory" data-cat="flow" onclick="showTest('trajectory','flow')">Trajectory Tracking</button>
       </div>
@@ -1109,6 +1111,15 @@
         <img src="static/images/maxforce.png" alt="Maximum fingertip force" loading="lazy" style="max-width:60%; height:auto; margin:1rem auto; display:block;"/>
         </div>
       </div>
+      <div class="test-panel" id="panel-stepforce" data-cat="effort" style="display:none;">
+        <h3 class="title is-4">Step Force Control</h3>
+        <div class="content has-text-justified">
+          <p>Track a square-wave reference force alternating between 1 N and 3 N every 1 s. We characterize settling time, overshoot, and steady-state error using a stationary load cell, then repeat the test for 10 N and 20 N force levels.</p>
+
+          <h2 class="subtitle has-text-centered">Step Force Response</h2>
+          <img src="static/images/stepforce.png" alt="Step force control response" loading="lazy" style="max-width:100%; height:auto; margin:1rem auto; display:block;"/>
+        </div>
+      </div
       <div class="test-panel" id="panel-stepposition" data-cat="effort" style="display:none;">
         <h3 class="title is-4">Step Position Control</h3>
         <div class="content has-text-justified">

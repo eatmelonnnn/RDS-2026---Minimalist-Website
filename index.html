@@ -1117,7 +1117,7 @@
       <div class="test-panel" id="panel-stepposition" data-cat="effort" style="display:none;">
         <h3 class="title is-4">Step Position Control</h3>
         <div class="content has-text-justified">
-          <p>The fingertip is attached to a spring representing an unknown environment (nominal stiffness ~1.2 N/cm, capable of 10 cm extension). We control the spring extension (measured by motor encoder or external sensor) to track a square-wave reference cycling between 0.5 cm and 2.5 cm every 1 s, characterizing settling time, overshoot, and steady-state error. The finger was able to track this trajectory with a total RMSE = 1.86 mm and provides good spatial reproduction of the commanded shape.</p>
+          <p>The fingertip is attached to a spring representing an unknown environment (nominal stiffness ~1.2 N/cm, capable of 10 cm extension). We control the spring extension (measured by motor encoder or external sensor) to track a square-wave reference cycling between 0.5 cm and 2.5 cm every 1 s, characterizing settling time, overshoot, and steady-state error.</p>
 
           <h2 class="subtitle has-text-centered">Step position</h2>
           <video controls muted loop style="max-width:100%; height:auto; margin:1rem auto; display:block;" preload="metadata">
@@ -1134,7 +1134,7 @@
       <div class="test-panel" id="panel-trajectory" data-cat="flow" style="display:none;">
         <h3 class="title is-4">Trajectory Tracking</h3>
         <div class="content has-text-justified" style="max-width:900px; margin:0 auto;">
-          <p>A tracking marker is placed on the fingertip and the finger is commanded to trace a Lissajous figure in its main plane of motion (flexion plane, ignoring splay; captured by 2D imaging). The reference is a 1:2 frequency-ratio curve with a 3&pi;/4 phase offset, bounded within a 3&nbsp;cm &times; 3&nbsp;cm region and traced as one full closed period at 0.5&nbsp;Hz. We record the marker's measured position, integrate the position error over the complete path, report the RMS tracking error, and visualize the measured path against the reference.</p>
+          <p>A tracking marker is placed on the fingertip and the finger is commanded to trace a Lissajous figure in its main plane of motion (flexion plane, ignoring splay; captured by 2D imaging). The reference is a 1:2 frequency-ratio curve with a 3&pi;/4 phase offset, bounded within a 3&nbsp;cm &times; 3&nbsp;cm region and traced as one full closed period at 0.5&nbsp;Hz. We record the marker's measured position, integrate the position error over the complete path, report the RMS tracking error, and visualize the measured path against the reference. The finger was able to track this trajectory with a total RMSE = 1.86 mm and provides good spatial reproduction of the commanded shape.</p>
           <div class="content" style="text-align:center; font-family: monospace; background:#f5f5f5; padding:1rem; border-radius:6px; margin:1rem 0;">
             x(t) = 1.5&nbsp;sin(2&pi;ft)&nbsp;cm<br>
             y(t) = 1.5&nbsp;sin(2&pi;(2f)t + 3&pi;/4)&nbsp;cm

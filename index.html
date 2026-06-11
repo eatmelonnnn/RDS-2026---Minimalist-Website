@@ -870,7 +870,17 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Control Flow Diagram</h2>
         <p class="subtitle is-6 has-text-justified" style="margin-bottom: 2rem;">
-          The finger operates as a finite-state machine on a Teensy 4.1, commanding three CubeMars motors over CAN in MIT mode. After startup and a hard-stop calibration (with tension-sensor zeroing), GPIO interrupts select one of eight control states. Three position states &mdash; step, Lissajous, and ellipse &mdash; emit Cartesian waypoints, run inverse kinematics to joint angles, and map through tendon lengths to motor position commands; a fourth, flexion&ndash;extension, is generated directly in joint space and is terminal (it detaches every interrupt). Three force states &mdash; zero, step, and a max-force ramp &mdash; close a PID loop around ADS1220 tendon-tension readings, mapping a desired fingertip force to tendon tensions and motor torques. A 500&nbsp;ms home-position ramp guards every state transition, and the calibration state can be re-entered at any time.
+          The finger operates as a finite-state machine on a Teensy 4.1, 
+          commanding three CubeMars motors over CAN in MIT mode. After startup
+           and a hard-stop calibration (with tension-sensor zeroing), GPIO interrupts
+            select one of eight control states. Three position states: step, Lissajous,
+             and ellipse, emit Cartesian waypoints, run inverse kinematics to joint angles,
+              and map through tendon lengths to motor position commands; a fourth, flexion-extension,
+               is generated directly in joint space and is terminal (it detaches every interrupt). 
+              Three force states: zero, step, and a max-force ramp, close a PID loop around
+               ADS1220 tendon-tension readings, mapping a desired fingertip force to tendon tensions and motor torques.
+               A 500&nbsp;ms home-position ramp guards every state transition, and the calibration state 
+               can be re-entered at any time.
         </p>
       </div>
     </div>
@@ -885,9 +895,9 @@
           </marker>
         </defs>
         <style>
-          .cf-t   { font-family: inherit; font-size: 14px; font-weight: 600; fill: #1a1a2e; }
-          .cf-ts  { font-family: inherit; font-size: 12px; font-weight: 400; fill: #4a4a4a; }
-          .cf-tm  { font-family: inherit; font-size: 11px; font-weight: 400; fill: #6b6b6b; }
+          .cf-t   { font-family: inherit; font-size: 16px; font-weight: 600; fill: #1a1a2e; }
+          .cf-ts  { font-family: inherit; font-size: 14px; font-weight: 400; fill: #4a4a4a; }
+          .cf-tm  { font-family: inherit; font-size: 12px; font-weight: 400; fill: #6b6b6b; }
           .cf-arr { fill: none; stroke: #aaa; stroke-width: 1; }
           .cf-box { stroke-width: 1; }
           .cf-dash{ fill: none; stroke: #c4c4c4; stroke-width: 1; stroke-dasharray: 4 4; }

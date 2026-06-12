@@ -749,5 +749,26 @@ a:focus {
   }
 }
 
+/* ===== Tighter layout: reduce whitespace ===== */
 
+/* 1) Widen the content area — kills most of the left/right empty space.
+      Bulma's .is-max-desktop caps it ~960px. Raise this number,
+      or use a % / 100% if you want it close to full-width. */
+.container.is-max-desktop {
+  max-width: 1200px;   /* try 1152px, 1344px, or 100% */
+}
 
+/* 2) Less vertical space in the colored hero "bands" */
+.hero-body {
+  padding: 2rem 1rem;        /* was 4rem 1.5rem (top/bottom + sides) */
+}
+
+.teaser .hero-body {
+  padding-top: 1rem;
+  padding-bottom: 2rem;      /* was 2rem / 4rem */
+}
+
+/* 3) Tighten the Bulma .section bands (default is 3rem 1.5rem) */
+.section {
+  padding: 1.5rem 1rem;
+}
